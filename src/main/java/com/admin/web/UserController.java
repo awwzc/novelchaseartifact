@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.admin.web.bean.AdminLoginBean;
@@ -24,7 +25,7 @@ public class UserController {
 			return  new ModelAndView("admin/login","data",returnData);
 		}
 	
-	    @RequestMapping(value="/login")
+	    @RequestMapping(value="/login",method={RequestMethod.GET,RequestMethod.POST})
 		public ModelAndView login(@Validated AdminLoginBean user ,BindingResult err){
 			Map<String,Object> returnData = new HashMap<String,Object>();
 			if(err.hasErrors()){
@@ -34,7 +35,10 @@ public class UserController {
 				 System.out.println(f.getCode()+":"+f.getDefaultMessage());
 			 }
 			}
-			
+			returnData.put("name", user.getName());
+			returnData.put("pwd", user.getPwd());
 			return  new ModelAndView("admin/index","data",returnData);
 		}
+	    
+	    
 }
