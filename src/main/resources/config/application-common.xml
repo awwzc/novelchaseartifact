@@ -14,7 +14,7 @@
 		<property name="locations" value="classpath:config/application-common.properties"/>
 	</bean>
 	
-	<bean id="sysBean" class="com.SysBean"/>
+	<!-- <bean id="sysBean" class="com.SysBean"/> -->
 	
 	<context:component-scan base-package="com"/>
     
