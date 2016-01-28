@@ -9,8 +9,8 @@
 
     <!-- Bootstrap core CSS -->
    
-    <link href="/public/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/blog.css">
+    <link href="<c:out value="${path }"/>/public//bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<c:out value="${path }"/>/css/blog.css">
   <script>
 	var _hmt = _hmt || [];
 	(function() {
@@ -57,8 +57,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src='/js/jquery-1.11.1.min.js'></script>
-    <script type="text/javascript" src='/js/desk.js'></script>
-    <script type="text/javascript" src="/public/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src='<c:out value="${path }"/>/js/jquery-1.11.1.min.js'></script>
+    <script type="text/javascript" src='<c:out value="${path }"/>/js/desk.js'></script>
+    <script type="text/javascript" src="<c:out value="${path }"/>/public/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
   </body>
 </html>
