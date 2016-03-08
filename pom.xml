@@ -77,5 +77,26 @@
   </dependencies>
   <build>
     <finalName>novelchaseartifact</finalName>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <plugins>
+    	<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-war-plugin</artifactId>
+        	<version>2.6</version>
+        	<configuration>
+            <webappDirectory>src/main/webapp</webappDirectory>
+        	<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+        	
+	          <webResources>
+	    		
+	            <resource>
+	              <directory>src/main/resource/config</directory>
+	              
+	            </resource>
+	          </webResources>
+        </configuration>
+    	</plugin>
+    </plugins>
   </build>
 </project>
