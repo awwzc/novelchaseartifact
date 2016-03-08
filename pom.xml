@@ -91,7 +91,7 @@
 	          <webResources>
 	    		
 	            <resource>
-	              <directory>src/main/resource/config</directory>
+	              <directory>src/main/resources/config</directory>
 	              
 	            </resource>
 	          </webResources>
